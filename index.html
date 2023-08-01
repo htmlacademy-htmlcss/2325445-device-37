@@ -5,89 +5,88 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
-
-    <header class="main-header">
+    <header class="header main-header">
       <div class="container">
         <a class="page-header-logo" href="index.html">
           <img src="#" alt="Логотип - надпись на английском Девайс.">
         </a>
 
-        <search>
+        <div class="user-menu-container">
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="header-search-field">Форма поиска по сайту.</label>
             <input class="search-field" type="search" name="search-field" id="header-search-field" placeholder="Поиск по сайту">
             <button class="submit-button" type="submit">Найти</button>
           </form>
-        </search>
 
-        <ul class="user-menu">
-          <li class="user-menu-item">
-            <div class="login-wrapper login-logged-out"> <!-- login-logged-in делает кнопку log-out видимой-->
-              <a class="login" href="#">Войти</a>
-              <button class="log-out">Выйти</button>
-            </div>
-          </li>
-          <li class="user-menu-item">
-            <a class="user-menu-link" href="#">Сравнить</a>
-          </li>
-          <li class="user-menu-item">
-            <a class="user-menu-link" href="#">
-              Корзина
-              <p class="cart-counter">2<span class="visually-hidden"> товара в корзине.</span></p>
-            </a>
-            <!-- Поповер -->
-            <div class="popover popover-cart">
-              <h2 class="visually-hidden">Корзина.</h2>
-              <ul class="cart-list">
-                <li class="cart-item">
-                  <img class="cart-item-img" src="#">
-                  <p class="cart-item-title">Любительская селфи-палка</p>
-                  <button class="cart-item-button" type="button">
-                    <span class="visually-hidden">Удалить из корзины.</span>
-                  </button>
-                </li>
-                <li class="cart-item">
-                  <img class="cart-item-img" src="#">
-                  <p class="cart-item-title">Профессиональная селфи-палка</p>
-                  <button class="cart-item-button" type="button">
-                    <span class="visually-hidden">Удалить из корзины.</span>
-                  </button>
-                </li>
-              </ul>
-              <div class="popover-row">
-                <p class="cart-item-total">Товаров: <span class="cart-item-counter">2</span></p>
-                <p class="cart-sum-total">Сумма: <span class="cart-sum-counter">2000</span> ₽</p>
+          <ul class="user-menu">
+            <li class="user-menu-item">
+              <div class="login-wrapper login-logged-out"> <!-- login-logged-in делает кнопку log-out видимой-->
+                <a class="user-menu-link user-menu-link-login" href="#">Войти</a>
+                <button class="logout-button" type="button">Выйти</button>
               </div>
-              <a class="popover-button" href="#">Открыть корзину</a>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <li class="user-menu-item">
+              <a class="user-menu-link user-menu-link-compare" href="#">Сравнить</a>
+            </li>
+            <li class="user-menu-item">
+              <a class="user-menu-link user-menu-link-cart" href="#">
+                Корзина
+                <p class="cart-counter">2<span class="visually-hidden"> товара в корзине.</span></p>
+              </a>
+              <!-- Поповер -->
+              <div class="popover popover-cart">
+                <p class="visually-hidden">Корзина.</p>
+                <ul class="cart-list">
+                  <li class="cart-item">
+                    <img class="cart-item-img" src="#" alt="">
+                    <p class="cart-item-title">Любительская селфи-палка</p>
+                    <button class="cart-item-button" type="button">
+                      <span class="visually-hidden">Удалить из корзины.</span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <img class="cart-item-img" src="#" alt="">
+                    <p class="cart-item-title">Профессиональная селфи-палка</p>
+                    <button class="cart-item-button" type="button">
+                      <span class="visually-hidden">Удалить из корзины.</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="popover-row">
+                  <p class="cart-item-total">Товаров: <span class="cart-item-counter">2</span></p>
+                  <p class="cart-sum-total">Сумма: <span class="cart-sum-counter">2000</span> ₽</p>
+                </div>
+                <a class="popover-button" href="#">Открыть корзину</a>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <nav class="navigation">
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link header-catalog-link" href="#">Каталог товаров</a>
-              <button class="header-catalog-button">
+              <a class="nav-link nav-link-dropdown" href="#">Каталог товаров</a>
+              <button class="nav-dropdown-button" type="button">
                 <span class="visually-hidden">Развернуть каталог.</span>
               </button>
-              <ul class="header-catalog-list">
-                <li class="header-catalog-item">
-                  <a class="header-catalog-link" href="#">Виртуальная реальность</a>
+              <ul class="nav-dropdown">
+                <li class="nav-dropdown-item">
+                  <a class="nav-dropdown-link" href="#">Виртуальная реальность</a>
                 </li>
-                <li class="header-catalog-item">
-                  <a class="header-catalog-link" href="#">Моноподы для cелфи</a>
+                <li class="nav-dropdown-item">
+                  <a class="nav-dropdown-link" href="#">Моноподы для cелфи</a>
                 </li>
-                <li class="header-catalog-item">
-                  <a class="header-catalog-link" href="#">Экшн-камеры</a>
+                <li class="nav-dropdown-item">
+                  <a class="nav-dropdown-link" href="#">Экшн-камеры</a>
                 </li>
-                <li class="header-catalog-item">
-                  <a class="header-catalog-link" href="#">Фитнес-браслеты</a>
+                <li class="nav-dropdown-item">
+                  <a class="nav-dropdown-link" href="#">Фитнес-браслеты</a>
                 </li>
-                <li class="header-catalog-item">
-                  <a class="header-catalog-link" href="#">Умные часы</a>
+                <li class="nav-dropdown-item">
+                  <a class="nav-dropdown-link" href="#">Умные часы</a>
                 </li>
-                <li class="header-catalog-item">
-                  <a class="header-catalog-link" href="#">Квадрокоптеры</a>
+                <li class="nav-dropdown-item">
+                  <a class="nav-dropdown-link" href="#">Квадрокоптеры</a>
                 </li>
               </ul>
             </li>
