@@ -18,7 +18,7 @@
             <button class="submit-button" type="submit">Найти</button>
           </form>
 
-          <ul class="user-menu">
+          <ul class="user-menu list-reset">
             <li class="user-menu-item">
               <div class="login-wrapper login-logged-out"> <!-- login-logged-in делает кнопку log-out видимой-->
                 <a class="user-menu-link user-menu-link-login" href="#">Войти</a>
@@ -36,7 +36,7 @@
               <!-- Поповер -->
               <div class="popover popover-cart">
                 <p class="visually-hidden">Корзина.</p>
-                <ul class="cart-list">
+                <ul class="cart-list list-reset">
                   <li class="cart-item">
                     <img class="cart-item-img" src="#" alt="">
                     <p class="cart-item-title">Любительская селфи-палка</p>
@@ -63,13 +63,13 @@
         </div>
 
         <nav class="navigation">
-          <ul class="nav-list">
+          <ul class="nav-list list-reset">
             <li class="nav-item">
-              <a class="nav-link nav-link-dropdown" href="#">Каталог товаров</a>
+              <a class="nav-link nav-link-catalog" href="#">Каталог товаров</a>
               <button class="nav-dropdown-button" type="button">
                 <span class="visually-hidden">Развернуть каталог.</span>
               </button>
-              <ul class="nav-dropdown">
+              <ul class="nav-dropdown list-reset">
                 <li class="nav-dropdown-item">
                   <a class="nav-dropdown-link" href="#">Виртуальная реальность</a>
                 </li>
@@ -112,7 +112,7 @@
             <!-- Слайдер -->
             <div class="slider-wrapper">
               <h2 class="visually-hidden">Промо-слайдер.</h2>
-              <ol class="slider-list">
+              <ol class="slider-list list-reset">
                 <li class="slider-item slider-item-active">
                   <!-- Слайд -->
                   <span class="slider-number" role="presentation">01</span>
@@ -196,7 +196,7 @@
                 </button>
               </div>
               <!-- Слайдер - пагинация -->
-              <ol class="slider-pagination">
+              <ol class="slider-pagination list-reset">
                 <li class="slider-pagination-item">
                   <button class="slider-pagination-button slider-pagination-button-current" type="button">
                     <span class="visually-hidden">Первый товар.</span>
@@ -221,7 +221,7 @@
       <section class="products">
         <div class="container">
           <h2 class="visually-hidden">Каталог товаров.</h2>
-          <ul class="products-list">
+          <ul class="products-list list-reset">
             <li class="product-category">
               <a href="#" class="product-category-link">Виртуальная реальность</a>
             </li>
@@ -245,39 +245,41 @@
       </section>
 
       <section class="services">
-        <h2 class="visually-hidden">Услуги.</h2>
-        <div class="services-slider">
-          <!-- Слайдер -->
-          <div class="services-slider-wrapper">
-            <!-- Слайдер - навигация -->
-            <ul class="servies-slider-nav">
-              <li class="servies-slider-nav-item">
-                <button class="button services-slider-button button-active services-slider-button-active" type="button">Доставка</button>
-              </li>
-              <li class="servies-slider-nav-item">
-                <button class="button services-slider-button button-active services-slider-button-active" type="button">Гарантия</button>
-              </li>
-              <li class="servies-slider-nav-item">
-                <button class="button services-slider-button button-active services-slider-button-active" type="button">Кредит</button>
-              </li>
-            </ul>
-            <!-- Слайд -->
-            <div class="services-slide slide-active">
-              <h3 class="slide-title">Доставка</h3>
-              <p class="slide-desc">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </div>
-            <div class="services-slide">
-              <h3 class="slide-title">Гарантия</h3>
-              <p class="slide-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-            </div>
-            <div class="services-slide">
-              <h3 class="slide-title">Кредит</h3>
-              <p class="slide-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+        <div class="container">
+          <h2 class="visually-hidden">Услуги.</h2>
+          <div class="services-slider">
+            <!-- Слайдер -->
+            <div class="services-slider-wrapper">
+              <!-- Слайдер - навигация -->
+              <ul class="servies-slider-nav list-reset">
+                <li class="servies-slider-nav-item">
+                  <button class="button services-slider-button button-active services-slider-button-active" type="button">Доставка</button>
+                </li>
+                <li class="servies-slider-nav-item">
+                  <button class="button services-slider-button button-active services-slider-button-active" type="button">Гарантия</button>
+                </li>
+                <li class="servies-slider-nav-item">
+                  <button class="button services-slider-button button-active services-slider-button-active" type="button">Кредит</button>
+                </li>
+              </ul>
+              <!-- Слайд -->
+              <div class="services-slide slide-active">
+                <h3 class="slide-title">Доставка</h3>
+                <p class="slide-desc">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </div>
+              <div class="services-slide">
+                <h3 class="slide-title">Гарантия</h3>
+                <p class="slide-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              </div>
+              <div class="services-slide">
+                <h3 class="slide-title">Кредит</h3>
+                <p class="slide-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="services-special">
-          <button class="services-special-button open-modal" type="button">Доставим редкий товар под заказ</button>
+          <div class="services-special">
+            <button class="services-special-button open-modal" type="button">Доставим редкий товар под заказ</button>
+          </div>
         </div>
       </section>
 
@@ -286,7 +288,7 @@
           <h2 class="about-title section-title">О нас</h2>
           <p class="about-content">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <p class="about-content">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
-          <ul class="about-list">
+          <ul class="about-list list-reset">
             <li class="about-list-item">Меловые линии</li>
             <li class="about-list-item">СДИК</li>
             <li class="about-list-item">ТоксБерри</li>
@@ -301,7 +303,7 @@
           <address>Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
           <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           <h3 class="contacts-subtitle">Время работы</h3>
-          <ul class="opening-hours">
+          <ul class="opening-hours list-reset">
             <li>пн—пт: с<time datetime="10:00">10:00</time> до <time datetime="20:00">20:00</time></li>
             <li>сб—вс: с<time datetime="10:00">10:00</time> до <time datetime="19:00">19:00</time></li>
           </ul>
@@ -310,15 +312,21 @@
       </div>
 
       <section class="subscribe">
-        <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-desc">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden" for="subscribe-email">Форма ввода электронной почты.</label>
-          <input class="subscribe-form-email" type="email" name="email" id="subscribe-email" placeholder="Ваш e-mail">
-          <button class="form-button" type="submit">Подписаться</button>
-        </form>
-        <span class="subscribe-free">Это бесплатно</span>
+        <div class="container">
+          <h2 class="subscribe-title section-title">Подпишитесь на рассылку</h2>
+          <p class="subscribe-desc">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="subscribe-email">Форма ввода электронной почты.</label>
+            <input class="subscribe-form-email" type="email" name="email" id="subscribe-email" placeholder="Ваш e-mail">
+            <button class="form-button" type="submit">Подписаться</button>
+          </form>
+          <span class="subscribe-free">Это бесплатно</span>
+        </div>
       </section>
+
+      <footer class="footer">
+
+      </footer>
     </main>
   </body>
 </html>
