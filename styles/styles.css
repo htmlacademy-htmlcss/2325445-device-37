@@ -1,0 +1,14 @@
+html, body {
+  height: 100%; /* sticky footer */
+  min-height: 100%; /* sticky footer */
+}
+
+body {
+  display: flex; /* sticky footer */
+  flex-direction: column; /* sticky footer */
+}
+
+.main {
+  flex-grow: 1; /* sticky footer */
+}
+
