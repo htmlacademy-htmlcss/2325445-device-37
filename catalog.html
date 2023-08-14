@@ -20,8 +20,8 @@
 
           <ul class="user-menu list-reset">
             <li class="user-menu-item">
-              <div class="login-wrapper login-logged-out"> <!-- login-logged-in делает кнопку log-out видимой-->
-                <a class="user-menu-link user-menu-link-login" href="#">Войти</a>
+              <div class="login-wrapper login-logged-in"> <!-- login-logged-in делает кнопку logout-button видимой-->
+                <a class="user-menu-link user-menu-link-login" href="#">Коля Петухов</a>
                 <button class="logout-button" type="button">Выйти</button>
               </div>
             </li>
@@ -121,7 +121,34 @@
       </header>
 
       <section class="catalog">
-
+        <h2 class="visually-hidden">Каталог товаров</h2>
+        <section class="filter">
+          <h3 class="filter-title">Фильтр:</h3>
+          <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="filter-group filter-group-range">
+              <legend class="filter-group-title">Стоимость</legend>
+              <div class="filter-range">
+                <div class="range-scale">
+                  <div class="range-control range-control-min">
+                    <input class="range-input visually-hidden" type="number" name="min-price" id="range-min" value="0">
+                    <label class="range-label" for="range-min">от <span class="range-value">0</span></label>
+                    <button class="range-button range-button-min" type="button">
+                      <span class="visually-hidden">Минимальная цена</span>
+                    </button>
+                  </div>
+                  <div class="range-control range-control-max">
+                    <input class="range-input visually-hidden" type="number" name="max-price" id="range-max" value="5000">
+                    <label class="range-label" for="range-max">до <span class="range-value">5000</span></label>
+                    <button class="range-button range-button-max" type="button">
+                      <span class="visually-hidden">Максимальная цена</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <button class="button" type="submit">Показать</button>
+          </form>
+        </section>
       </section>
     </main>
 
