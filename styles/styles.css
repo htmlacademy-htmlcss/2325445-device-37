@@ -36,6 +36,14 @@ html, body {
 body {
   display: flex; /* sticky footer */
   flex-direction: column; /* sticky footer */
+  min-width: 1440px;
+  margin: 0;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background-color: #ffffff;
 }
 
 .visually-hidden {
@@ -58,6 +66,105 @@ body {
 .container {
   margin: 0 auto;
   width: 1160px;
+}
+
+.button {
+  display: inline-block;
+  padding: 9px 37px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-stroke {
+  background-image: linear-gradient(#ffe17f, #ffe17f);
+  background-size: 100% 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: background-size 0.2s ease-in;
+}
+
+.button-stroke:hover:not(:disabled) {
+  background-size: 100% 100%;
+}
+
+.button-stroke:active:not(:disabled) {
+  background-image: linear-gradient(#ffcc33, #ffcc33);
+  background-size: 100% 100%;
+}
+
+.button-stroke:focus {
+  background-size: 100% 8px;
+}
+
+.button-stroke:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
+.button-bordered {
+  padding: 15px 34px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 3.2px;
+  border: 3px solid #e5e5e5;
+
+  transition: border 0.15s ease-in,
+              opacity 0.15s ease-in;
+}
+
+.button-bordered:hover:not(:disabled) {
+  border: 3px solid #000000;
+}
+
+.button-bordered:active:not(:disabled) {
+  opacity: 0.3;
+}
+
+.button-bordered:focus-visible {
+  outline: 2px solid #af4fff;
+}
+
+.button-bordered-forms {
+  padding: 15px 34px;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 3.6px;
+  border: 3px solid #c4c4c4;
+
+  transition: border 0.15s ease-in,
+              background-color 0.15s ease-in,
+              color 0.15s ease-in;
+}
+
+.button-bordered-forms:hover:not(:disabled) {
+  color: #ffffff;
+  background-color: #000000;
+  border: 3px solid #000000;
+}
+
+.button-bordered-forms:active:not(:disabled) {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-bordered-forms:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.3;
 }
 
 .title {
