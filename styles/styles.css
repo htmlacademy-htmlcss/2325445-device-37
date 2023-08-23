@@ -1029,6 +1029,90 @@ body {
   background-color: #000000;
 }
 
+/* categories */
+
+.categories {
+  padding: 35px 0;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  column-gap: 40px;
+}
+
+.category-link {
+  display: block;
+  min-height: 253px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: -0.36px;
+
+  transition: opacity 0.15s ease-in;
+}
+
+.category-link:active {
+  opacity: 0.3;
+}
+
+.category-link:focus-visible {
+  opacity: 1;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.category-link::before {
+  content: "";
+
+  display: block;
+  margin-bottom: 33px;
+  width: 160px;
+  height: 160px;
+
+  background-color: #ffe17f;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top 1px;
+
+  transition: background-color 0.15s ease-in;
+}
+
+.category-link:hover::before {
+  background-color: #ffc700;
+}
+
+.category-link:active::before {
+  background-color: #ffe17f;
+}
+
+.category-link-vr::before {
+  background-image: url("../images/categories/vr.svg");
+}
+
+.category-link-monopod::before {
+  background-image: url("../images/categories/monopod.svg");
+}
+
+.category-link-action-cam::before {
+  background-image: url("../images/categories/action-cam.svg");
+}
+
+.category-link-bracelet::before {
+  background-image: url("../images/categories/bracelet.svg");
+}
+
+.category-link-smart-watch::before {
+  background-image: url("../images/categories/smart-watch.svg");
+}
+
+.category-link-quadrocopter::before {
+  background-image: url("../images/categories/quadrocopter.svg");
+}
+
 }
 
 .main {
