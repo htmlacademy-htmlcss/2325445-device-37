@@ -1676,6 +1676,77 @@ body {
   outline-offset: 2px;
 }
 
+/* catalog */
+
+.catalog-page-container {
+  padding-left: 60px;
+}
+
+.catalog-header {
+  padding-top: 35px;
+  padding-bottom: 33px;
+}
+
+.catalog-header-title {
+  margin: 0;
+  margin-top: 1px;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 36px;
+}
+
+.breadcrumbs-item::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: -20px;
+  width: 4px;
+  height: 7px;
+  background-image: url("../images/breadcrumbs-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item:last-child::before {
+  content: none;
+}
+
+.breadcrumbs-link {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+
+  transition: opacity 0.15s ease-in;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:focus-visible {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 }
 
 .main {
