@@ -1747,6 +1747,255 @@ body {
   outline-offset: 2px;
 }
 
+.catalog {
+  background-color: #f0f0f0;
+}
+
+.catalog-container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  column-gap: 40px;
+}
+
+/* filters */
+
+.filter {
+  padding: 25px 0;
+}
+
+.filter-title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+
+.filter-form {
+  padding-top: 33px;
+}
+
+.filter-group {
+  margin: 0;
+  margin-bottom: 33px;
+  padding: 0;
+  margin-right: 20px;
+
+  border: none;
+  border-top: 2px solid #000000;
+}
+
+.filter-group-title {
+  float: left;
+  display: block;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-top: 12px;
+  width: 100%;
+
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+/* range slider */
+
+.filter-range {
+  padding-top: 60px;
+  padding-bottom: 33px;
+}
+
+.range-scale {
+  position: relative;
+  width: 200px;
+  height: 2px;
+  background-color: #dcdcdc;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range-control {
+  position: absolute;
+  top: -8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.range-toggle {
+  margin-bottom: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: #ebebeb;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: opacity 0.15s ease-in,
+              background-color 0.15s ease-in;
+}
+
+.range-toggle:hover {
+  opacity: 0.5;
+}
+
+.range-toggle:active {
+  opacity: 1;
+  background-color: #000000;
+}
+
+.range-toggle:focus-visible {
+  position: relative;
+  outline: none;
+}
+
+.range-toggle:focus-visible::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
+}
+
+.range-control-min {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.range-control-max {
+  right: 0;
+  transform: translateX(50%);
+}
+
+.range-label {
+  margin-top: 2px;
+  max-width: 75px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.range-label:focus-within {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+/* filter lists */
+
+.filter-list {
+  padding-top: 52px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.filter-item:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+.filter-item-radio:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* custom radios & checkboxes */
+
+.control {
+  display: flex;
+  align-items: center;
+  min-width: 65px;
+  transition: opacity 0.15s ease-in;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+
+  appearance: none;
+  background-color: transparent;
+  background-size: 0;
+  border: 2px solid #cccccc;
+}
+
+.control-input:focus-visible {
+  outline: none;
+  position: relative;
+}
+
+.control-input:focus-visible::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
+}
+
+.control-input:disabled {
+  opacity: 0.1;
+}
+
+.control-input:disabled + .control-label {
+  opacity: 0.1;
+}
+
+.control-input[type="checkbox"] {
+  border-radius: 3px;
+}
+
+.control-input[type="checkbox"]:checked {
+  background-image: url("../images/checkmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+  border: 2px solid #000000;
+}
+
+.control-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked {
+  background-image: radial-gradient(circle, black, black 68%, transparent 68%);;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px 8px;
+  border: 2px solid #000000;
+}
+
+.control-label {
+  margin-left: 16px;
+}
+
+/* submit button */
+
+.filter-button {
+  width: 100%;
+  margin-top: 3px;
+}
+
 }
 
 .main {
