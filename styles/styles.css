@@ -1520,11 +1520,15 @@ body {
 }
 
 .footer-logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: logo;
   margin-left: 1px;
 }
 
 .footer-address {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: address;
   font-size: 16px;
   line-height: 20px;
@@ -1532,6 +1536,8 @@ body {
 }
 
 .footer-nav {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: nav;
 
   display: flex;
@@ -1575,6 +1581,8 @@ body {
 }
 
 .footer-phone {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
   grid-area: phone;
   justify-self: end;
 
@@ -1599,6 +1607,8 @@ body {
 }
 
 .footer-socials {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
   grid-area: socials;
   display: flex;
   flex-wrap: wrap;
@@ -1648,6 +1658,8 @@ body {
 }
 
 .madeby-logo {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
   grid-area: madeby;
   justify-self: end;
   align-self: end;
@@ -1933,7 +1945,8 @@ body {
   height: 20px;
   margin: 0;
 
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-color: transparent;
   background-size: 0;
   border: 2px solid #cccccc;
@@ -2046,7 +2059,8 @@ body {
   background-image: url("../images/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 9px center;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 
   cursor: pointer;
 
@@ -2449,7 +2463,8 @@ body {
   padding: 18px 9px;
   width: 60px;
   text-align: center;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .modal-input-quantity:not(:placeholder-shown) {
