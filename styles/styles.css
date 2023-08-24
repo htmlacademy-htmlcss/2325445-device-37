@@ -677,10 +677,14 @@ img {
 }
 
 .nav-link-current {
-  text-decoration: 2px;
-  text-decoration-color: inherit;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
+  -webkit-text-decoration: 2px;
+          text-decoration: 2px;
+  -webkit-text-decoration-color: inherit;
+          text-decoration-color: inherit;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
   text-underline-offset: 8px;
 
   outline: none;
@@ -768,10 +772,14 @@ img {
 }
 
 .nav-dropdown-link-current {
-  text-decoration: 2px;
-  text-decoration-color: inherit;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
+  -webkit-text-decoration: 2px;
+          text-decoration: 2px;
+  -webkit-text-decoration-color: inherit;
+          text-decoration-color: inherit;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
   text-underline-offset: 6px;
 
   outline: none;
@@ -2194,10 +2202,14 @@ img {
 
 .footer-nav-link:hover {
   color: #ffc700;
-  text-decoration: 2px;
-  text-decoration-color: inherit;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
+  -webkit-text-decoration: 2px;
+          text-decoration: 2px;
+  -webkit-text-decoration-color: inherit;
+          text-decoration-color: inherit;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
   text-underline-offset: 8px;
 
   outline: none;
