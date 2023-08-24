@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
+
   <body>
     <header class="header header-inner">
       <div class="container header-container">
@@ -16,15 +17,18 @@
 
         <div class="user-menu-container">
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="visually-hidden" for="header-search-field">Форма поиска по сайту.</label>
-            <input class="search-field" type="search" name="search-field" id="header-search-field" placeholder="Поиск по сайту">
-            <button class="search-button" type="submit">Найти</button>
+            <label class="search-label" for="header-search-field">
+              <input class="search-field" type="search" name="search-field" id="header-search-field" placeholder="Поиск по сайту">
+            </label>
+            <button class="button button-dark search-button" type="submit">Найти</button>
           </form>
 
           <ul class="user-menu list-reset">
-            <li class="user-menu-item user-menu-login logged-in"> <!-- logged-in делает кнопку user-menu-logout видимой-->
+            <li class="user-menu-item">
               <a class="user-menu-link user-menu-link-login" href="#">Коля Петухов</a>
-              <button class="user-menu-logout" type="button">Выйти</button>
+            </li>
+            <li class="user-menu-item">
+              <a class="user-menu-link user-menu-link-logout" href="#">Выйти</a>
             </li>
             <li class="user-menu-item">
               <a class="user-menu-link user-menu-link-compare" href="#">Сравнить</a>
@@ -35,7 +39,7 @@
                 <p class="cart-counter">2<span class="visually-hidden"> товара в корзине.</span></p>
               </a>
               <!-- Поповер -->
-              <div class="popover-cart"> <!-- класс popover-open делает popover-cart видимым -->
+              <div class="popover-cart">
                 <h2 class="visually-hidden">Корзина.</h2>
                 <ul class="popover-cart-list list-reset">
                   <li class="popover-cart-item">
@@ -82,30 +86,35 @@
         <nav class="navigation">
           <ul class="nav-list list-reset">
             <li class="nav-item nav-item-catalog">
-              <a class="nav-link nav-link-catalog" href="#">Каталог товаров</a>
-              <ul class="nav-dropdown list-reset"> <!-- nav-dropdown-open раскрывает каталог -->
-                <li class="nav-dropdown-item">
-                  <a class="nav-dropdown-link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="nav-dropdown-item">
-                  <a class="nav-dropdown-link nav-dropdown-link-current" href="catalog.html" aria-current="page">Моноподы для cелфи</a>
-                </li>
-                <li class="nav-dropdown-item">
-                  <a class="nav-dropdown-link" href="#">Экшн-камеры</a>
-                </li>
-                <li class="nav-dropdown-item">
-                  <a class="nav-dropdown-link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="nav-dropdown-item">
-                  <a class="nav-dropdown-link" href="#">Умные часы</a>
-                </li>
-                <li class="nav-dropdown-item">
-                  <a class="nav-dropdown-link" href="#">Квадрокоптеры</a>
-                </li>
-              </ul>
-              <button class="nav-dropdown-button" type="button">
-                <span class="visually-hidden">Развернуть каталог.</span>
-              </button>
+              <a class="nav-link nav-link-catalog" href="#">Каталог товаров
+                <span></span>
+              </a>
+              <div class="nav-catalog-container">
+                <ul class="nav-dropdown list-reset">
+                  <li class="nav-dropdown-item">
+                    <a class="nav-dropdown-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a class="nav-dropdown-link nav-dropdown-link-current" href="catalog.html" aria-current="page">Моноподы для cелфи</a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a class="nav-dropdown-link" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
+                <ul class="nav-dropdown list-reset">
+                  <li class="nav-dropdown-item">
+                    <a class="nav-dropdown-link" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="nav-dropdown-item">
+                    <a class="nav-dropdown-link" href="#">Умные часы</a>
+                  </li>
+                </ul>
+                <ul class="nav-dropdown list-reset">
+                  <li class="nav-dropdown-item">
+                    <a class="nav-dropdown-link" href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Доставка</a>
@@ -133,20 +142,20 @@
               <a class="breadcrumbs-link" href="#">Каталог товаров</a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link" href="catalog.html" aria-current="page">Моноподы для селфи</a>
+              <a class="breadcrumbs-link breadcrumbs-link-current" href="catalog.html" aria-current="page">Моноподы для селфи</a>
             </li>
           </ul>
         </header>
       </div>
 
       <section class="catalog">
-        <div class="container catalog-page-container catalog-container">
+        <div class="container catalog-container">
           <h2 class="visually-hidden">Каталог товаров.</h2>
           <section class="filter">
             <h3 class="filter-title">Фильтр:</h3>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filter-group filter-group-range">
-                <legend class="filter-group-title">Стоимость</legend>
+                <h4 class="filter-group-title">Стоимость</h4>
                 <div class="filter-range">
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; right: 81px">
@@ -173,7 +182,7 @@
                 </div>
               </fieldset>
               <fieldset class="filter-group">
-                <legend class="filter-group-title">Цвет</legend>
+                <h4 class="filter-group-title">Цвет</h4>
                 <ul class="filter-list list-reset">
                   <li class="filter-item">
                     <label class="control">
@@ -208,7 +217,7 @@
                 </ul>
               </fieldset>
               <fieldset class="filter-group">
-                <legend class="filter-group-title" lang="en">Bluetooth</legend>
+                <h4 class="filter-group-title" lang="en">Bluetooth</h4>
                 <ul class="filter-list list-reset">
                   <li class="filter-item filter-item-radio">
                     <label class="control">
@@ -232,21 +241,23 @@
             <div class="results-sort">
               <h3 class="sort-title">Сортировка:</h3>
 
-              <div class="sort-select">
-                <select class="select-control" aria-label="Сортировка">
-                  <option value="popular" selected>Популярные</option>
-                  <option value="new">Новинки</option>
-                  <option value="low-to-high">Подешевле</option>
-                  <option value="high-to-low">Подороже</option>
-                </select>
-              </div>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="popular" selected>Популярные</option>
+                <option value="new">Новинки</option>
+                <option value="low-to-high">Подешевле</option>
+                <option value="high-to-low">Подороже</option>
+              </select>
 
               <ul class="sort-order list-reset">
                 <li class="sort-order-item">
-                  <a class="sort-order-link sort-order-ascend" href="#"><span class="visually-hidden">По возрастанию</span></a>
+                  <a class="sort-order-link sort-order-ascend" href="#">
+                    <span class="visually-hidden">По возрастанию</span>
+                  </a>
                 </li>
                 <li class="sort-order-item">
-                  <a class="sort-order-link sort-order-descend" href="#"><span class="visually-hidden">По убыванию</span></a>
+                  <a class="sort-order-link sort-order-descend" href="#">
+                    <span class="visually-hidden">По убыванию</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -301,9 +312,9 @@
                   </a>
                 </li>
               </ul>
-              <a class="button button-bordered results-button" href="#">Загрузить ещё</a>
+              <a class="button results-button" href="#">Загрузить ещё</a>
               <div class="pagination">
-                <a class="button pagination-button pagination-button-prev pagination-button-current" href="#">Назад</a>
+                <a class="pagination-button pagination-button-prev pagination-button-disabled" href="#">Назад</a>
                 <ol class="pagination-list list-reset">
                   <li class="pagination-item">
                     <a class="pagination-link pagination-link-current" href="#" aria-current="page">1</a>
@@ -321,7 +332,7 @@
                     <a class="pagination-link" href="#">15</a>
                   </li>
                 </ol>
-                <a class="button pagination-button pagination-button-next" href="#">Вперёд</a>
+                <a class="pagination-button pagination-button-next" href="#">Вперёд</a>
               </div>
             </div>
           </section>
@@ -330,60 +341,60 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-container">
-        <a class="logo footer-logo" href="#">
+      <div class="container">
+        <a class="logo footer-logo" href="index.html">
           <img src="images/logos/footer-logo.svg" width="145" height="36" alt="Логотип - надпись на английском Девайс.">
         </a>
-        <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-        <h3 class="visually-hidden">Навигация по сайту.</h3>
-        <ul class="footer-nav list-reset">
-          <li class="footer-nav-item">
-            <a class="nav-link footer-nav-link" href="#">Доставка</a>
-          </li>
-          <li class="footer-nav-item">
-            <a class="nav-link footer-nav-link" href="#">Гарантия</a>
-          </li>
-          <li class="footer-nav-item">
-            <a class="nav-link footer-nav-link" href="#">Контакты</a>
-          </li>
-        </ul>
-        <a class="phone footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-        <ul class="footer-socials list-reset">
-          <li class="footer-socials-item">
-            <a class="footer-socials-link" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграм.</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" fill="#444" viewBox="0 0 14 12">
-                <path d="M12.44.07.62 4.63c-.8.33-.8.78-.14.98l3.03.94 7.02-4.43c.33-.2.64-.09.39.13l-5.7 5.13-.2 3.13c.3 0 .44-.14.61-.3l1.48-1.44 3.06 2.27c.57.31.97.15 1.12-.53l2-9.48c.21-.83-.3-1.2-.85-.96Z"/>
-              </svg>
-            </a>
-          </li>
-          <li class="footer-socials-item">
-            <a class="footer-socials-link" href="https://www.youtube.com/user/htmlacademyru">
-              <span class="visually-hidden" lang="en">YouTube.</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" fill="#444" viewBox="0 0 16 11">
-                <path d="M15.67 1.67c-.1-.32-.27-.61-.51-.84-.25-.24-.56-.41-.9-.5C13.01 0 8 0 8 0 5.9-.02 3.8.08 1.74.32 1.4.4 1.1.58.84.82c-.24.24-.42.53-.51.85A19.4 19.4 0 0 0 0 5.34C0 6.56.1 7.79.33 9c.09.32.27.61.51.85.25.23.56.4.9.5 1.27.32 6.26.32 6.26.32 2.09.02 4.18-.08 6.26-.31.34-.09.65-.26.9-.5.24-.23.42-.52.5-.84.24-1.21.35-2.44.34-3.67.02-1.23-.1-2.46-.33-3.68ZM6.4 7.62V3.05l4.18 2.29L6.4 7.62Z"/>
-              </svg>
-            </a>
-          </li>
-          <li class="footer-socials-item">
-            <a class="footer-socials-link" href="https://twitter.com/htmlacademy_ru">
-              <span class="visually-hidden" lang="en">Twitter.</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#444" viewBox="0 0 15 15">
-                <path d="M9.7.16c1.5-.5 2.6.3 3.2 1.1.5-.2 1.1-.4 1.7-.6 0 .8-.5 1.4-.8 1.6.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4c-.3 0-3.7-.4-4.3-1.8 2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2-1.1-.8-2.3-1.5-2.2-3.5.3.3.9.5 1.2.4C1 5.26-.2 2.36.8.86c1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <a class="madeby-logo" href="https://htmlacademy.ru/">
-          <svg xmlns="http://www.w3.org/2000/svg" width="115" height="33" viewBox="0 0 115 33">
-            <path d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"/>
-          </svg>
-        </a>
+        <div class="footer-content">
+          <address class="footer-address">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
+          <h3 class="visually-hidden">Навигация по сайту.</h3>
+          <ul class="footer-nav list-reset">
+            <li class="footer-nav-item">
+              <a class="nav-link footer-nav-link" href="#">Доставка</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="nav-link footer-nav-link" href="#">Гарантия</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="nav-link footer-nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <a class="phone footer-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+          <ul class="footer-socials list-reset">
+            <li class="footer-socials-item">
+              <a class="footer-socials-link" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Телеграм.</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" fill="#444" viewBox="0 0 14 12">
+                  <path d="M12.44.07.62 4.63c-.8.33-.8.78-.14.98l3.03.94 7.02-4.43c.33-.2.64-.09.39.13l-5.7 5.13-.2 3.13c.3 0 .44-.14.61-.3l1.48-1.44 3.06 2.27c.57.31.97.15 1.12-.53l2-9.48c.21-.83-.3-1.2-.85-.96Z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials-item">
+              <a class="footer-socials-link" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden" lang="en">YouTube.</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" fill="#444" viewBox="0 0 16 11">
+                  <path d="M15.67 1.67c-.1-.32-.27-.61-.51-.84-.25-.24-.56-.41-.9-.5C13.01 0 8 0 8 0 5.9-.02 3.8.08 1.74.32 1.4.4 1.1.58.84.82c-.24.24-.42.53-.51.85A19.4 19.4 0 0 0 0 5.34C0 6.56.1 7.79.33 9c.09.32.27.61.51.85.25.23.56.4.9.5 1.27.32 6.26.32 6.26.32 2.09.02 4.18-.08 6.26-.31.34-.09.65-.26.9-.5.24-.23.42-.52.5-.84.24-1.21.35-2.44.34-3.67.02-1.23-.1-2.46-.33-3.68ZM6.4 7.62V3.05l4.18 2.29L6.4 7.62Z"/>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials-item">
+              <a class="footer-socials-link" href="https://twitter.com/htmlacademy_ru">
+                <span class="visually-hidden" lang="en">Twitter.</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#444" viewBox="0 0 15 15">
+                  <path d="M9.7.16c1.5-.5 2.6.3 3.2 1.1.5-.2 1.1-.4 1.7-.6 0 .8-.5 1.4-.8 1.6.7.2 1.2-.4 1.2-.4-.1.9-.9 1.7-1.4 1.9-.2 6.3-2.8 10.4-8.9 10.3h-.4c-.3 0-3.7-.4-4.3-1.8 2 .2 3.4-.4 4.1-1.1-.8-.3-2.4-.4-2.6-2.8.3.2.5.3 1.1.2-1.1-.8-2.3-1.5-2.2-3.5.3.3.9.5 1.2.4C1 5.26-.2 2.36.8.86c1.6 1.7 3.3 3.4 6.3 3.5.2-2.1 1-3.5 2.6-4.2Z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a class="madeby-logo" href="https://htmlacademy.ru/" aria-label="Логотип HTMLAcademy">
+            <svg xmlns="http://www.w3.org/2000/svg" width="115" height="33" viewBox="0 0 115 33">
+              <path d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
 
-    <!-- Скрипты для удобной проверки :) -->
-    <script src="./popover.js"></script>
-    <script src="./dropdown-menu.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
