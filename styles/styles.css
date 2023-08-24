@@ -96,6 +96,7 @@ img {
   cursor: pointer;
 
   transition: color 0.15s ease-in,
+              background-color 0.15s ease-in,
               border-color 0.15s ease-in;
 }
 
@@ -1269,7 +1270,7 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 20px 96px;
 
-  padding-bottom: 21px;
+  padding-bottom: 15px;
 }
 
 .info-section {
@@ -1346,7 +1347,7 @@ img {
 }
 
 .about-button {
-  padding: 7px 22px;
+  padding: 10px 22px;
 }
 
 .contacts-address {
@@ -1373,7 +1374,7 @@ img {
 }
 
 .contacts-button {
-  padding: 7px 32px;
+  padding: 10px 32px;
 }
 
 /* subscribe */
