@@ -1612,6 +1612,7 @@ img {
 .range-bar {
   position: absolute;
   height: 2px;
+
   background-color: #000000;
 }
 
@@ -1634,17 +1635,17 @@ img {
   border-radius: 50%;
   cursor: pointer;
 
-  transition: opacity 0.15s ease-in,
+  transition: border-color 0.15s ease-in,
               background-color 0.15s ease-in;
 }
 
-.range-toggle:hover {
-  opacity: 0.5;
+.range-toggle:hover:not(:disabled) {
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
-.range-toggle:active {
+.range-toggle:active:not(:disabled) {
   background-color: #000000;
-  opacity: 1;
+  border-color: #000000;
 }
 
 .range-toggle:focus-visible {
@@ -1665,6 +1666,10 @@ img {
   outline-offset: 4px;
 }
 
+.range-toggle:disabled {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
 .range-control-min {
   left: 0;
   transform: translateX(-50%);
@@ -1676,17 +1681,57 @@ img {
 }
 
 .range-label {
+  display: grid;
+  grid-template-columns: 17px 35px;
+  justify-content: center;
+  column-gap: 2px;
+
   margin-top: 2px;
-  max-width: 75px;
 
   font-size: 14px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+
+  transition: color 0.15s ease-in;
+}
+
+.range-control-min .range-label {
+  margin-right: -28px;
+}
+
+.range-label:hover {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .range-label:focus-within {
+  color: #000000;
+
   outline: 2px solid #af4fff;
   outline-offset: 2px;
+}
+
+.range-input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: inherit;
+
+  background-color: transparent;
+  border: none;
+}
+
+.range-input:focus {
+  outline: none;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 /* filter lists */
