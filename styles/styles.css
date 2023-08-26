@@ -1741,6 +1741,9 @@ img {
 
   background-color: transparent;
   border: none;
+
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .range-input:focus {
