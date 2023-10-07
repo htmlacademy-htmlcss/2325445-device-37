@@ -2331,8 +2331,41 @@ img {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
 
-  transition: background-color 0.15s ease-in,
-              fill-opacity 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+}
+
+.footer-socials-link::before {
+  content: "";
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: 16px 16px;
+          mask-size: 16px 16px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+
+  background-color: #444444;
+
+  transition: opacity 0.15s ease-in;
+}
+
+.footer-socials-link-telegram::before {
+  -webkit-mask-image: url("../images/telegram.svg");
+          mask-image: url("../images/telegram.svg");
+}
+
+.footer-socials-link-youtube::before {
+  -webkit-mask-image: url("../images/youtube.svg");
+          mask-image: url("../images/youtube.svg");
+}
+
+.footer-socials-link-twitter::before {
+  -webkit-mask-image: url("../images/twitter.svg");
+          mask-image: url("../images/twitter.svg");
 }
 
 .footer-socials-link:hover {
@@ -2341,7 +2374,10 @@ img {
 
 .footer-socials-link:active {
   background-color: #ffc700;
-  fill-opacity: 0.3;
+}
+
+.footer-socials-link:active::before {
+  opacity: 0.3;
 }
 
 .footer-socials-link:focus-visible {
@@ -2350,7 +2386,7 @@ img {
   outline: none;
 }
 
-.footer-socials-link:focus-visible::before {
+.footer-socials-link:focus-visible::after {
   content: "";
   position: absolute;
   top: -4px;
@@ -2368,20 +2404,37 @@ img {
   margin-left: auto;
   width: 115px;
   height: 34px;
-
-  fill: #ffc700;
-
-  transition: fill 0.15s ease-in,
-              fill-opacity 0.15s ease-in;
 }
 
-.madeby-logo:hover {
-  fill: #ffffff;
+.madeby-logo::before {
+  content: "";
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  -webkit-mask-image: url("../images/logos/madeby-logo.svg");
+          mask-image: url("../images/logos/madeby-logo.svg");
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: 115px 34px;
+          mask-size: 115px 34px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+
+  background-color: #ffc700;
+
+  transition: background-color 0.15s ease-in,
+              opacity 0.15s ease-in;
 }
 
-.madeby-logo:active {
-  fill: #ffffff;
-  fill-opacity: 0.3;
+.madeby-logo:hover::before {
+  background-color: #ffffff;
+}
+
+.madeby-logo:active::before {
+  background-color: #ffffff;
+  opacity: 0.3;
 }
 
 .madeby-logo:focus-visible {
